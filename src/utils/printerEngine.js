@@ -70,7 +70,7 @@ class PrinterEngine {
                 device = await navigator.bluetooth.requestDevice({
                     filters: [
                         ...KNOWN_PRINTER_SERVICES.map(s => ({ services: [s] })),
-                        { namePrefix: 'ManeMess' },
+                        { namePrefix: 'Printer' },
                     ],
                     optionalServices: KNOWN_PRINTER_SERVICES,
                 });
@@ -277,11 +277,11 @@ class PrinterEngine {
         parts.push(this._alignCenter());
         parts.push(this._doubleSize(true));
         parts.push(this._bold(true));
-        parts.push(this._encode('MANE MESS'));
+        parts.push(this._encode('POS DEMO'));
         parts.push(this._cmd(LF));
         parts.push(this._doubleSize(false));
         parts.push(this._bold(false));
-        parts.push(this._encode('Karvenagar, Pune'));
+        parts.push(this._encode('Thermal Printer Demo'));
         parts.push(this._cmd(LF));
 
         parts.push(this._dashedLine());
@@ -358,7 +358,7 @@ class PrinterEngine {
         parts.push(this._cmd(LF));
         parts.push(this._doubleSize(false));
         parts.push(this._bold(false));
-        parts.push(this._encode('Mane Mess - Karvenagar'));
+        parts.push(this._encode('POS Demo'));
         parts.push(this._cmd(LF));
         parts.push(this._solidLine());
         parts.push(this._cmd(LF));
