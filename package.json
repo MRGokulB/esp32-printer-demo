@@ -14,9 +14,13 @@
   "description": "",
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.5.5",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
     "vite": "^8.2.2"
   },
   "dependencies": {
+    "lucide-react": "^1.41.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
